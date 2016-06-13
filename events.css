@@ -1,0 +1,44 @@
+body {
+	margin: 20px;
+	font-family: helvetica;
+	font-size: 1.1rem;
+}
+
+/*		When you click the "Add color" button, the guinea-pig element's text color should change to blue.
+		var addColorEl = document.getElementById("add-color");			// Add color  </button>
+		var pageTitleEl = document.getElementById("page-title");	//<h1> element*/
+.blued {
+	color: blue;
+}
+
+	When you click the "Hulkify" button, the guinea-pig element's font size should become much larger.
+var makeLargeEl = document.getElementById("make-large");		// Hulkify  </button>
+.hulkified {
+	size: 2rem;
+}
+
+
+
+		When you click the "Capture it" button, the guinea-pig element should have a border added to it.	
+var addBorderEl = document.getElementById("add-border");		// Capture it	</button>
+
+
+		When you click the "Rounded" button, the guinea-pig element's border should become rounded.
+var addRoundingEl = document.getElementById("add-rounding");// Rounded  </button>
+
+
+		The first section's text should be bold.
+		The last section's text should be bold and italicized.
+var articleSectionEl = document.getElementsByClassName("article-section"); //</section> NOT ARTICLE!!
+
+
+		Make the buttons stop appearing next to each other as inline elements. Change them into block elements.
+var buttons = document.getElementsByTagName("button");
+
+
+/*Not used for CSS stuff
+var headerEl = document.getElementById("page-header");		//header AREA
+var keypressInputEl = document.getElementById("keypress-input");  // text input area
+var outputTargetEl = document.getElementById("output-target");		// output-target </div>
+var guineaPigEl = document.getElementById("guinea-pig");		// Leave me alone </div>
+*/

@@ -1,18 +1,16 @@
 // console.log("events.js is linked");
-var headerEl = document.getElementById("page-header");		//header AREA
-var pageTitleEl = document.getElementById("page-title");	//<h1> element
+var headerEl = document.getElementById("page-header");    //header AREA
+var pageTitleEl = document.getElementById("page-title");  //<h1> element
 
 var keypressInputEl = document.getElementById("keypress-input");  // text input area
-var outputTargetEl = document.getElementById("output-target");		// output-target </div>
+var outputTargetEl = document.getElementById("output-target");    // output-target </div>
 
-var guineaPigEl = document.getElementById("guinea-pig");		  // Leave me alone </div>
-
-var addColorButtonEl = document.getElementById("add-color");	// Add color    </button>
-var makeLargeEl = document.getElementById("make-large");		  // Hulkify      </button>
-var addBorderEl = document.getElementById("add-border");		  // Capture it	  </button>
+var guineaPigEl = document.getElementById("guinea-pig");      // Leave me alone </div>
+var addColorButtonEl = document.getElementById("add-color");  // Add color    </button>
+var makeLargeEl = document.getElementById("make-large");      // Hulkify      </button>
+var addBorderEl = document.getElementById("add-border");      // Capture it	  </button>
 var addRoundingEl = document.getElementById("add-rounding");  // Rounded      </button>
-var buttons = document.getElementsByTagName("button");        // ALL BUTTONS by "TAG NAME" 
-
+var buttonsEl = document.getElementsByTagName("button");      // ALL BUTTONS by "TAG NAME" 
 var articleSectionEl = document.getElementsByClassName("article-section"); //</section> NOT ARTICLE!!
 
 
@@ -47,71 +45,42 @@ keypressInputEl.addEventListener("keyup", (function(event) {
 addColorButtonEl.addEventListener("click", (function(event) {
   guineaPigEl.classList.toggle("blued");
   pageTitleEl.classList.toggle("blued");
-  console.log("guineaPigEl.classList color =", guineaPigEl.classList);
+  // console.log("guineaPigEl.classList color =", guineaPigEl.classList);
 }));
 
 // 6 When you click the "Hulkify" button, the guinea-pig element's font size should become much larger.
-makeLargeEl.addEventListener("click", (function (event) {
+makeLargeEl.addEventListener("click", (function(event) {
   guineaPigEl.classList.toggle("hulkified");
-  console.log("guineaPigEl.classList size =",guineaPigEl.classList);
-}))
+  // console.log("guineaPigEl.classList size =", guineaPigEl.classList);
+}));
 
+// 7 When you click the "Capture it" button, the guinea-pig element should have a border added to it.
+addBorderEl.addEventListener("click", (function(event) {
+  guineaPigEl.classList.toggle("captured");
+  // console.log("guineaPigEl.classList border =", guineaPigEl.classList);
+}));
 
+// 8 When you click the "Rounded" button, the guinea-pig element's border should become rounded.
+addRoundingEl.addEventListener("click", (function(event) {
+  guineaPigEl.classList.toggle("rounded");
+  // console.log("guineaPigEl.classList rounded =", guineaPigEl.classList);
+}));
 
+// 9 The first section's text should be bold.
+for (var i = 0; i < articleSectionEl.length -3; i++) {
+  articleSectionEl[i].classList.add("bolded");
+  // console.log("First 3 'section' bolded =", articleSectionEl[i]);
+};
 
+// 10 The last section's text should be bold and italicized.
+for (var i = 3; i < articleSectionEl.length; i++) {
+  articleSectionEl[i].classList.add("bolded","italicized");
+  // console.log("Last 3 'section' bolded & italicized =", articleSectionEl[i]);
+};
 
-// console.log("Hello Nurse");
-// // Assign elements of the DOM to variables
-// var outputEl = document.getElementById("output-target");
-// var articleSectionEl = document.getElementsByClassName("article-section");
-// var titleEl = document.getElementById("page-title");
-// var inputEl = document.getElementById("keypress-input");
-// var pigText = document.getElementById("guinea-pig");
-// var colorButton = document.getElementById("add-color");
-// var hulkButton = document.getElementById("make-large");
-// var borderButton = document.getElementById("add-border");
-// var roundButton = document.getElementById("add-rounding");
-// var allButton = document.getElementsByTagName("button");
+// 11 Make the buttons stop appearing next to each other as inline elements. Change them into block elements.
+for (var i = 0; i < buttonsEl.length; i++) {
+  buttonsEl[i].classList.add("blocked");
+  // console.log("guineaPigEl.classList blocked =",buttonsEl[i]);
+};
 
-// 6 When you click the "Hulkify" button, the guinea-pig element's font size should become much larger.
-// function hulkify(event) {
-// 	pigText.style.fontSize = '3em';
-// }
-
-function hulkify(event) {
-	pigText.classList.add('largeFont');
-}
-hulkButton.addEventListener("click", hulkify);
-
-
-// // 7 When you click the "Capture it" button, the guinea-pig element should have a border added to it.
-// // function addBorder(event) {
-// // 	pigText.style.border = '1px solid green';
-// // }
-
-// function addBorder(event) {
-// 	pigText.classList.add('blueBorder');
-// }
-// borderButton.addEventListener("click", addBorder);
-
-
-// // 8 When you click the "Rounded" button, the guinea-pig element's border should become rounded.
-// // function roundBorder(event) {
-// // 	pigText.style.borderRadius = '10px';
-// // }
-
-// function roundBorder(event) {
-// 	pigText.classList.add('roundedBorder');
-// }
-
-// roundButton.addEventListener("click", roundBorder);
-
-
-// // 9 The first section's text should be bold.
-// articleSectionEl[2].classList.add('goBold');
-// // 10 The last section's text should be bold and italicized.
-// articleSectionEl[4].classList.add('italicize', 'goBold');
-// // 11 Make the buttons stop appearing next to each other as inline elements. Change them into block elements.
-// for (var i = 0; i < allButton.length; i++) {
-// 	allButton[i].classList.add('blocked');
-// }

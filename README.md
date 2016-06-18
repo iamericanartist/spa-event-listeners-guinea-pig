@@ -1,6 +1,8 @@
 # The Guinea Pig
 ## Single Page App / Event Listeners / Guinea Pig
 
+![Guinea Pig Event Listeners screenshot](guineaPig.jpg?raw=true "Guinea Pig Screenshot") 
+
 ## Instructions
 
 1. There is sample HTML file content below so create an `index.html` for it and place the content in the body tag.
